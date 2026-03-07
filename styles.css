@@ -293,7 +293,13 @@ pre {
 }
 
 .about-grid,
-.project-grid,
+.project-grid {
+  margin-top: 1.4rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
 .skills-grid {
   margin-top: 1.4rem;
   display: grid;
@@ -403,6 +409,37 @@ pre {
   padding-left: 1rem;
 }
 
+.skill-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 215px;
+}
+
+.education-grid {
+  margin-top: 1.4rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.achievements-card {
+  margin-top: 1.4rem;
+  border-radius: 16px;
+  padding: 1.2rem;
+}
+
+.achievements-card ul {
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.achievements-card li {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
 .contact {
   text-align: center;
   padding-bottom: 5.2rem;
@@ -471,8 +508,15 @@ pre {
 @media (max-width: 1024px) {
   .hero,
   .about-grid,
-  .project-grid,
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
   .skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .education-grid {
     grid-template-columns: 1fr;
   }
 
@@ -529,6 +573,10 @@ pre {
 
   .section {
     padding: 3.9rem 0;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
 
   pre {
