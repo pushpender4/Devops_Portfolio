@@ -1,4 +1,4 @@
-﻿const revealItems = document.querySelectorAll('.reveal');
+const revealItems = document.querySelectorAll('.reveal');
 
 const observer = new IntersectionObserver(
   (entries) => {
@@ -25,12 +25,21 @@ const nav = document.querySelector('.nav');
 const navLinks = document.querySelectorAll('.nav a');
 const sections = document.querySelectorAll('main section[id]');
 
+const setMenu = (open) => {
+  nav?.classList.toggle('open', open);
+  menuBtn?.setAttribute('aria-expanded', String(open));
+};
+
 menuBtn?.addEventListener('click', () => {
-  nav?.classList.toggle('open');
+  setMenu(!nav?.classList.contains('open'));
 });
 
 navLinks.forEach((link) => {
-  link.addEventListener('click', () => nav?.classList.remove('open'));
+  link.addEventListener('click', () => setMenu(false));
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') setMenu(false);
 });
 
 const setActiveNav = () => {
@@ -49,5 +58,5 @@ const setActiveNav = () => {
   });
 };
 
-window.addEventListener('scroll', setActiveNav);
+window.addEventListener('scroll', setActiveNav, { passive: true });
 window.addEventListener('load', setActiveNav);

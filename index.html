@@ -1,9 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pushpender Singh | Cloud & DevOps Engineer</title>
+  <meta name="description" content="Pushpender Singh – Cloud & DevOps Engineer with 3+ years of experience in AWS, Kubernetes (EKS), Jenkins CI/CD, HashiCorp Vault and automation. Open to DevOps, SRE and Cloud Engineer roles." />
+  <meta name="theme-color" content="#09121a" />
+  <meta property="og:title" content="Pushpender Singh | Cloud & DevOps Engineer" />
+  <meta property="og:description" content="AWS, Kubernetes (EKS), Jenkins, HashiCorp Vault and automation. Open to DevOps, SRE and Cloud Engineer roles." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2309121a'/%3E%3Ctext x='50' y='66' font-size='54' font-family='monospace' font-weight='700' text-anchor='middle' fill='%235ce1e6'%3EPS%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -14,7 +20,7 @@
 
   <header class="header glass">
     <a class="brand" href="#home">Pushpender<span>Ops</span></a>
-    <nav class="nav">
+    <nav class="nav" id="site-nav">
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
@@ -23,7 +29,7 @@
       <a href="#achievements">Achievements</a>
       <a href="#contact">Contact</a>
     </nav>
-    <button class="menu-btn" aria-label="Toggle menu">Menu</button>
+    <button class="menu-btn" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">Menu</button>
   </header>
 
   <main id="home">
@@ -32,31 +38,33 @@
         <p class="eyebrow">CLOUD & DEVOPS ENGINEER PORTFOLIO</p>
         <h1>PUSHPENDER SINGH</h1>
         <p class="role">Cloud & DevOps Engineer</p>
-        <p class="lead">Cloud and DevOps Engineer with 3 years of experience designing, deploying, and operating cloud-native containerized systems on AWS, with strong focus on CI/CD automation, Infrastructure as Code, Kubernetes orchestration, and production observability.</p>
+        <p class="lead">Cloud and DevOps Engineer with 3+ years of experience deploying and operating containerized systems on AWS. Currently running multi-client production releases through Jenkins on AWS EKS and Windows/IIS, with hands-on depth in Kubernetes, HashiCorp Vault, and Bash/PowerShell automation.</p>
 
         <div class="hero-cta">
           <a href="#experience" class="btn btn-primary">View Experience</a>
-          <a href="Pushpender_Resume - Latest.pdf" class="btn btn-ghost" download>Download Resume</a>
+          <a href="Pushpender_Singh_Resume_Nov2026.pdf" class="btn btn-ghost" download>Download Resume</a>
         </div>
 
         <div class="stats">
           <div>
-            <h3>3 Years</h3>
+            <h3>3+ Years</h3>
             <p>Cloud/DevOps Experience</p>
+          </div>
+          <div>
+            <h3>2 hrs → 1 min</h3>
+            <p>Vault Token Rotation per Large Client</p>
           </div>
           <div>
             <h3>60%</h3>
             <p>Manual Release Effort Reduced</p>
-          </div>
-          <div>
-            <h3>30-40%</h3>
-            <p>Build/Image Optimization</p>
           </div>
         </div>
 
         <div class="quick-contact glass">
           <a href="mailto:rishut996@gmail.com">rishut996@gmail.com</a>
           <a href="tel:+917018510061">+91 7018510061</a>
+          <a href="https://github.com/pushpender4" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/pushpender-singh-8195301b2/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
       </div>
 
@@ -68,17 +76,17 @@
             <span></span><span></span><span></span>
             <p>release.pipeline</p>
           </div>
-<pre><code>$ jenkins build deploy-prod
+<pre><code>$ jenkins build deploy-module
 Pipeline: SUCCESS
 
-$ aws ecs update-service --force-new-deployment
-service/app-service updated
+$ ./rotate-vault-token.sh --dry-run
+resources to update: deployments, configmaps
 
 $ kubectl rollout status deploy/api-gateway
 deployment "api-gateway" successfully rolled out
 
-$ aws cloudwatch describe-alarms
-production alarms: healthy</code></pre>
+$ curl https://service/ping
+service is up and running</code></pre>
         </div>
       </div>
     </section>
@@ -86,20 +94,20 @@ production alarms: healthy</code></pre>
     <section id="about" class="section">
       <div class="section-head reveal">
         <p class="eyebrow">ABOUT</p>
-        <h2>Engineering reliable cloud delivery for microservices and APIs.</h2>
+        <h2>Engineering reliable cloud delivery for multi-client products and APIs.</h2>
       </div>
       <div class="about-grid">
         <article class="glass card reveal">
           <h3>AWS-First Operations</h3>
-          <p>Hands-on with EC2, S3, IAM, VPC, ECS, ECR, RDS, CloudFront, and Beanstalk, including networking and security group fundamentals for production workloads.</p>
+          <p>Hands-on with EKS, EC2, S3, IAM, VPC, ECS, ECR, RDS, CloudFront, and Beanstalk, working across multiple AWS accounts and production workloads.</p>
         </article>
         <article class="glass card reveal">
-          <h3>Automation & IaC</h3>
-          <p>Builds repeatable infrastructure and delivery workflows through Terraform, Ansible, Jenkins, GitHub Actions, and Git-driven release processes.</p>
+          <h3>Automation & Scripting</h3>
+          <p>Replaces slow, error-prone manual work with Bash, kubectl, jq, and PowerShell scripts, alongside Jenkins, GitHub Actions, Terraform, and Ansible workflows.</p>
         </article>
         <article class="glass card reveal">
           <h3>Runtime Reliability</h3>
-          <p>Supports Java, Python, and PHP microservices with deployment stability, observability, incident debugging, and faster root-cause analysis.</p>
+          <p>Deploys and debugs Python and PHP services on Kubernetes and Windows/IIS, with post-release validation, log analysis, and incident handling through ServiceNow.</p>
         </article>
       </div>
     </section>
@@ -113,37 +121,37 @@ production alarms: healthy</code></pre>
         <article class="glass skill-group reveal">
           <h3>Cloud Compute</h3>
           <div class="chips">
-            <span>AWS EC2</span><span>AWS ECS</span><span>AWS ECR</span><span>AWS Beanstalk</span><span>AWS RDS</span><span>AWS S3</span><span>AWS IAM</span>
+            <span>AWS EKS</span><span>AWS EC2</span><span>AWS ECS</span><span>AWS ECR</span><span>AWS Beanstalk</span><span>AWS RDS</span><span>AWS S3</span>
           </div>
         </article>
         <article class="glass skill-group reveal">
-          <h3>Cloud Networking</h3>
+          <h3>Networking & Security</h3>
           <div class="chips">
-            <span>AWS VPC</span><span>VPN</span><span>DNS</span><span>Load Balancing</span><span>AWS CloudFront</span><span>Subnets</span><span>Security Groups</span>
+            <span>HashiCorp Vault</span><span>AWS IAM</span><span>AWS VPC</span><span>Security Groups</span><span>Load Balancing</span><span>AWS CloudFront</span>
           </div>
         </article>
         <article class="glass skill-group reveal">
           <h3>Containers & Releases</h3>
           <div class="chips">
-            <span>Docker</span><span>Kubernetes</span><span>Containerization</span><span>Deployment Validation</span><span>Blue-Green Rollouts</span><span>Rollback Readiness</span>
+            <span>Docker</span><span>Kubernetes</span><span>kubectl</span><span>Helm (basic)</span><span>Blue-Green Rollouts</span><span>Rollback Readiness</span><span>Deployment Validation</span>
           </div>
         </article>
         <article class="glass skill-group reveal">
           <h3>CI/CD & IaC</h3>
           <div class="chips">
-            <span>Jenkins</span><span>GitHub Actions</span><span>Git</span><span>Terraform</span><span>Ansible</span><span>Azure DevOps</span><span>Maven</span>
+            <span>Jenkins</span><span>GitHub Actions</span><span>Git</span><span>Terraform</span><span>Ansible</span><span>Azure DevOps</span>
           </div>
         </article>
         <article class="glass skill-group reveal">
-          <h3>Programming & Runtime</h3>
+          <h3>Scripting & Platforms</h3>
           <div class="chips">
-            <span>Java</span><span>Python</span><span>Bash</span><span>PHP</span><span>Linux (Ubuntu)</span><span>Shell Scripting</span><span>REST APIs</span>
+            <span>Bash</span><span>PowerShell</span><span>Python</span><span>jq</span><span>PHP</span><span>Linux (Ubuntu)</span><span>Windows Server</span><span>IIS</span>
           </div>
         </article>
         <article class="glass skill-group reveal">
-          <h3>Monitoring & Backend</h3>
+          <h3>Monitoring & Operations</h3>
           <div class="chips">
-            <span>Prometheus</span><span>Grafana</span><span>AWS CloudWatch</span><span>MySQL</span><span>Symfony</span><span>MVC</span><span>Backend Support</span>
+            <span>AWS CloudWatch</span><span>Prometheus</span><span>Grafana</span><span>ServiceNow</span><span>Jira</span><span>Salesforce (deployment validation)</span>
           </div>
         </article>
       </div>
@@ -152,33 +160,47 @@ production alarms: healthy</code></pre>
     <section id="experience" class="section">
       <div class="section-head reveal">
         <p class="eyebrow">EXPERIENCE</p>
-        <h2>Software Engineer at Happiest Minds Technologies (Aug 2023 - Present)</h2>
+        <h2>Senior System Engineer at Axtria Ingenious Insights, previously Software Engineer at Happiest Minds Technologies.</h2>
       </div>
 
       <div class="timeline">
         <article class="timeline-item glass reveal">
           <div class="timeline-head">
-            <h3>PepsiCo Project</h3>
+            <h3>Axtria Ingenious Insights · Senior System Engineer (DevOps – Deployment)</h3>
+            <p>Sep 2026 - Present</p>
+          </div>
+          <ul>
+            <li>Own production releases of Axtria SalesIQ and MarketingIQ (Python microservices, 8-9 services per module) through Jenkins pipelines for 50+ clients on AWS EKS and Windows EC2/IIS, handling about 2 deployments per day.</li>
+            <li>Validate every release with post-deployment sanity checks: pod health and service endpoints on EKS, and /ping checks plus IIS Python/FastCGI configuration on Windows.</li>
+            <li>Manage multi-region HashiCorp Vault secrets (US, EU, JP) with per-client and per-module paths for UAT and Prod, and handle credential change requests through ServiceNow.</li>
+            <li>Troubleshoot EKS pod and configuration issues across multiple AWS accounts, working with project teams through pod log analysis.</li>
+            <li>Install Salesforce packages for each upgrade and validate deployments through connection checks and data ingestion.</li>
+          </ul>
+        </article>
+
+        <article class="timeline-item glass reveal">
+          <div class="timeline-head">
+            <h3>NBB Project · Happiest Minds Technologies</h3>
+            <p>May 2025 - Aug 2026</p>
+          </div>
+          <ul>
+            <li>Supported deployment and lifecycle operations of GenAI-powered API services built on Pimcore with stable cloud environment configuration.</li>
+            <li>Enhanced CI/CD and monitoring workflows for AI-driven APIs, troubleshooting build failures, latency, integration timeouts, and container configuration issues.</li>
+            <li>Supported production monitoring and incident debugging across distributed API services interacting with AI model providers.</li>
+          </ul>
+        </article>
+
+        <article class="timeline-item glass reveal">
+          <div class="timeline-head">
+            <h3>PepsiCo Project · Happiest Minds Technologies</h3>
             <p>Aug 2023 - Apr 2025</p>
           </div>
           <ul>
             <li>Built and maintained CI/CD pipelines with Jenkins and GitHub Actions, integrating Maven-based artifacts and environment configuration injection, reducing manual release effort by 60%.</li>
             <li>Containerized services with Docker and deployed on AWS ECS/ECR, resolving build failures, dependency conflicts, and startup issues while reducing image size and build time by 30-40%.</li>
             <li>Supported Kubernetes deployments with rollout validation, configuration consistency, and rolling/blue-green release support for safer production rollouts.</li>
-            <li>Partnered with backend teams across Java, Python, and PHP microservices to resolve environment and runtime stability issues.</li>
+            <li>Partnered with backend teams on deployment and runtime stability of Java, Python, and PHP microservices.</li>
             <li>Improved post-release visibility through AWS CloudWatch logs, metrics, and alarms for faster incident debugging and RCA.</li>
-          </ul>
-        </article>
-
-        <article class="timeline-item glass reveal">
-          <div class="timeline-head">
-            <h3>NBB Project</h3>
-            <p>May 2025 - Present</p>
-          </div>
-          <ul>
-            <li>Supported deployment and lifecycle operations of GenAI-powered API services built on Pimcore with stable cloud environment configuration.</li>
-            <li>Enhanced CI/CD and monitoring workflows for AI-driven APIs, troubleshooting build failures, latency, integration timeouts, and container configuration issues.</li>
-            <li>Supported production monitoring and incident debugging across distributed API services interacting with AI model providers.</li>
           </ul>
         </article>
       </div>
@@ -190,6 +212,31 @@ production alarms: healthy</code></pre>
         <h2>Selected delivery outcomes from production work.</h2>
       </div>
       <div class="project-grid">
+        <article class="project-card glass reveal">
+          <h3>Vault Token Rotation Automation</h3>
+          <p>When 53 client Vault tokens were due to expire, I replaced a manual edit-everything process with Bash, kubectl, and jq scripts. One script finds the namespaces using the old token. The other runs in dry-run mode first, then replaces the token in Deployments and ConfigMaps and restarts them.</p>
+          <ul>
+            <li>About 2 hours of manual edits per large client reduced to under 1 minute</li>
+            <li>No manual replacement mistakes across clients with up to 50 tenants</li>
+            <li>Now reused by the team to find client namespaces during deployments</li>
+          </ul>
+        </article>
+        <article class="project-card glass reveal">
+          <h3>Jenkins Agent Connectivity at Scale</h3>
+          <p>Verified Jenkins connectivity on 226 Windows EC2 servers. A PowerShell script removed the repeated RDP login steps, and a second script checked the Java version and agent.jar connection on each server.</p>
+          <ul>
+            <li>Replaced an estimated 10-12 days of manual effort</li>
+            <li>Login reduced to the server IP and credentials</li>
+          </ul>
+        </article>
+        <article class="project-card glass reveal">
+          <h3>Multi-Client Release Operations</h3>
+          <p>Run daily Jenkins-based deployments of independent product modules on mixed client infrastructure, with some clients on EKS and some on Windows EC2/IIS.</p>
+          <ul>
+            <li>About 2 deployments per day with post-release validation</li>
+            <li>Every release tracked on a deployment dashboard with version, SLA, downtime window, and owner</li>
+          </ul>
+        </article>
         <article class="project-card glass reveal">
           <h3>CI/CD Modernization for Enterprise Releases</h3>
           <p>Designed robust Jenkins and GitHub Actions pipelines with Maven artifact integration and environment injection to standardize releases.</p>
@@ -266,7 +313,7 @@ production alarms: healthy</code></pre>
 
     <section id="contact" class="section contact reveal">
       <p class="eyebrow">CONTACT</p>
-      <h2>Open to Cloud and DevOps engineering opportunities.</h2>
+      <h2>Open to DevOps, SRE, and Cloud Engineer opportunities.</h2>
       <div class="contact-links">
         <a class="btn btn-primary" href="mailto:rishut996@gmail.com">rishut996@gmail.com</a>
         <a class="btn btn-ghost" href="tel:+917018510061">+91 7018510061</a>
